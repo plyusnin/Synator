@@ -9,15 +9,20 @@
 import SwiftUI
 
 struct ContentView: View {
-    var station: Station
+    @ObservedObject var station: Station
     
     var body: some View {
         List {
             ForEach(station.tasks) { task in
                 TaskView(task: task)
             }
+            .onDelete(perform: delete)
         }
         .background(Color.gray.opacity(0.5))
+    }
+    
+    func delete(at offsets: IndexSet) {
+        station.tasks.remove(atOffsets: offsets)
     }
 }
 

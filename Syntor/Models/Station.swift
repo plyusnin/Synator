@@ -1,5 +1,12 @@
-struct Station {
-    var tasks: [Task]
+import SwiftUI
+import Combine
+
+class Station: ObservableObject {
+    @Published var tasks: [Task]
+    
+    init(tasks: [Task] = []) {
+        self.tasks = tasks
+    }
 }
 
 #if DEBUG
