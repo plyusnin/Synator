@@ -12,6 +12,8 @@
 		ACC34A6124324F490072C8C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACC34A6024324F490072C8C0 /* Assets.xcassets */; };
 		ACC34A6424324F490072C8C0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACC34A6324324F490072C8C0 /* Preview Assets.xcassets */; };
 		ACC34A6724324F490072C8C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACC34A6524324F490072C8C0 /* Main.storyboard */; };
+		ACC34A71243250DF0072C8C0 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC34A70243250DF0072C8C0 /* Task.swift */; };
+		ACC34A732432514D0072C8C0 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC34A722432514D0072C8C0 /* Station.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		ACC34A6624324F490072C8C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ACC34A6824324F490072C8C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACC34A6924324F490072C8C0 /* Syntor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Syntor.entitlements; sourceTree = "<group>"; };
+		ACC34A70243250DF0072C8C0 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		ACC34A722432514D0072C8C0 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +59,9 @@
 		ACC34A5B24324F470072C8C0 /* Syntor */ = {
 			isa = PBXGroup;
 			children = (
-				ACC34A5C24324F470072C8C0 /* AppDelegate.swift */,
 				ACC34A5E24324F470072C8C0 /* ContentView.swift */,
+				ACC34A6F243250AC0072C8C0 /* Models */,
+				ACC34A5C24324F470072C8C0 /* AppDelegate.swift */,
 				ACC34A6024324F490072C8C0 /* Assets.xcassets */,
 				ACC34A6524324F490072C8C0 /* Main.storyboard */,
 				ACC34A6824324F490072C8C0 /* Info.plist */,
@@ -72,6 +77,15 @@
 				ACC34A6324324F490072C8C0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ACC34A6F243250AC0072C8C0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ACC34A70243250DF0072C8C0 /* Task.swift */,
+				ACC34A722432514D0072C8C0 /* Station.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +160,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACC34A5F24324F470072C8C0 /* ContentView.swift in Sources */,
+				ACC34A71243250DF0072C8C0 /* Task.swift in Sources */,
+				ACC34A732432514D0072C8C0 /* Station.swift in Sources */,
 				ACC34A5D24324F470072C8C0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
