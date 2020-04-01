@@ -4,8 +4,44 @@ import Combine
 class Station: ObservableObject {
     @Published var tasks: [Task]
     
+    var address: String
+    var port: Int
+    var login: String
+    var password: String
+    
     init(tasks: [Task] = []) {
         self.tasks = tasks
+        address = "my.synology.com"
+        port = 5000
+        login = "admin"
+        password = ""
+    }
+    
+    init(address: String, login: String, password: String, port: Int = 5000) {
+        tasks = [Task]()
+        self.address = address
+        self.login = login
+        self.password = password
+        self.port = port
+        Connect()
+    }
+    
+    func Connect() -> String {
+        let url = URL(string: "http://\(address):\(port)/webapi/auth.cgi?api=SYNO.API.Auth&version=2&method=login&account=\(login)&passwd=\(password)&session=DownloadStation&format=cookie")!
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let data = data {
+                let jsonDecoder = JSONDecoder()
+                do {
+                    let parsedJSON = try jsonDecoder.decode(AuthorizationResponse.self, from: data)
+                    print(parsedJSON)
+                } catch {
+                    print(error)
+                }
+            }
+        }.resume()
+        
+        return "dsfsdf"
     }
 }
 

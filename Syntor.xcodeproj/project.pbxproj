@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC9ADF7C2433B9FA00990C8F /* Entities.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9ADF7B2433B9FA00990C8F /* Entities.swift */; };
 		ACC34A5D24324F470072C8C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC34A5C24324F470072C8C0 /* AppDelegate.swift */; };
 		ACC34A5F24324F470072C8C0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC34A5E24324F470072C8C0 /* ContentView.swift */; };
 		ACC34A6124324F490072C8C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACC34A6024324F490072C8C0 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC9ADF7B2433B9FA00990C8F /* Entities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entities.swift; sourceTree = "<group>"; };
 		ACC34A5924324F470072C8C0 /* Syntor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Syntor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC34A5C24324F470072C8C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACC34A5E24324F470072C8C0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,6 +42,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC9ADF7A2433B9D100990C8F /* Station Entities */ = {
+			isa = PBXGroup;
+			children = (
+				AC9ADF7B2433B9FA00990C8F /* Entities.swift */,
+			);
+			path = "Station Entities";
+			sourceTree = "<group>";
+		};
 		ACC34A5024324F470072C8C0 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +92,7 @@
 		ACC34A6F243250AC0072C8C0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AC9ADF7A2433B9D100990C8F /* Station Entities */,
 				ACC34A70243250DF0072C8C0 /* Task.swift */,
 				ACC34A722432514D0072C8C0 /* Station.swift */,
 			);
@@ -159,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC9ADF7C2433B9FA00990C8F /* Entities.swift in Sources */,
 				ACC34A5F24324F470072C8C0 /* ContentView.swift in Sources */,
 				ACC34A71243250DF0072C8C0 /* Task.swift in Sources */,
 				ACC34A732432514D0072C8C0 /* Station.swift in Sources */,
