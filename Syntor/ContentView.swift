@@ -18,7 +18,6 @@ struct ContentView: View {
             }
             .onDelete(perform: delete)
         }
-        .background(Color.gray.opacity(0.5))
     }
     
     func delete(at offsets: IndexSet) {
@@ -32,7 +31,7 @@ struct TaskView: View {
         HStack {
             Circle()
                 .aspectRatio(1.0, contentMode: .fit)
-                .opacity(0.5)
+                .foregroundColor(.secondary)
             
             VStack(alignment: .leading) {
                 Text(task.name)
@@ -41,7 +40,7 @@ struct TaskView: View {
                 
                 Text("Параметры")
                     .font(.caption)
-                    .opacity(0.625)
+                    .foregroundColor(.secondary)
                 
             }
             

@@ -8,11 +8,33 @@
 
 import Foundation
 
-struct AuthorizationResponse: Decodable {
-    let data: AuthorizationData
+struct Response<T: Decodable>: Decodable {
+    let data: T
     let success: Bool
+}
+
+struct AuthorizationData: Decodable {
+    let sid: String
+}
+
+struct TaskListData: Decodable {
+    let total: Int
+    let offset: Int
+    let tasks: [TaskData]
     
-    struct AuthorizationData: Decodable {
-        let sid: String
+    struct TaskData: Decodable {
+        let id: String
+        let title: String
+    }
+    
+    struct TaskAdditionalData: Decodable {
+        let transfer: TaskTransferData
+    }
+    
+    struct TaskTransferData: Decodable {
+        let size_downloaded: String
+        let size_uploaded: String
+        let speed_download: Int
+        let speed_uploaded: Int
     }
 }

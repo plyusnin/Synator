@@ -1,4 +1,4 @@
 struct Task: Identifiable {
-    var id: Int
+    var id: String
     var name: String
 }
